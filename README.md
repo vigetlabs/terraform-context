@@ -6,16 +6,16 @@ This project includes source code that is licensed under the Apache License 2.0 
 
 Terraform module designed to generate consistent names and tags for resources. Use `terraform-context` to implement a strict naming convention.
 
-There are 6 inputs considered "labels" or "ID elements" (because the labels are used to construct the ID):
+There are 5 inputs considered "labels" or "ID elements" (because the labels are used to construct the ID):
 1. namespace
 2. tenant
+3. stage
 4. component
 5. attributes
 
 This module generates IDs using the following convention by default: `{namespace}-{stage}-{component}-{attributes}`.
 However, it is highly configurable. The delimiter (e.g. `-`) is configurable. Each label item is optional (although you must provide at least one).
 and the label `id` will look like `{namespace}-{stage}-{component}-{attributes}`.
-- The `tenant` label was introduced in v0.25.0. To preserve backward compatibility, it is not included by default.
 - The `attributes` input is actually a list of strings and `{attributes}` expands to the list elements joined by the delimiter.
 - If `attributes` is excluded but `namespace`, `stage`, and `component` are included, `id` will look like `{namespace}-{stage}-{component}`.
   Excluding `attributes` is discouraged, though, because attributes are the main way modules modify the ID to ensure uniqueness when provisioning the same resource types.

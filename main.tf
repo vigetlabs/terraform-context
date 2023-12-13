@@ -3,10 +3,7 @@
 
 locals {
   defaults = {
-    # The `tenant` label was introduced in v0.25.0. To preserve backward compatibility, or, really, to ensure
-    # that people using the `tenant` label are alerted that it was not previously supported if they try to
-    # use it in an older version, it is not included by default.
-    label_order         = ["namespace", "stage", "component", "attributes"]
+    label_order         = ["namespace", "tenant", "stage", "component", "attributes"]
     regex_replace_chars = "/[^-a-zA-Z0-9]/"
     delimiter           = "-"
     replacement         = ""
