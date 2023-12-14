@@ -5,8 +5,8 @@
 #
 # Copy this file from https://github.com/vigetlabs/terraform-context/blob/main/exports/context.tf
 # and then place it in your Terraform module to automatically get
-# Cloud Posse's standard configuration inputs suitable for passing
-# to Cloud Posse modules.
+# Viget's standard configuration inputs suitable for passing
+# to Viget modules.
 #
 # curl -sL https://raw.githubusercontent.com/vigetlabs/terraform-context/main/exports/context.tf -o context.tf
 #
