@@ -121,7 +121,7 @@ locals {
     tenant     = local.tenant
     stage      = local.stage
     component  = local.component
-    name       = local.id
+    name       = local.id_full
     attributes = local.id_context.attributes
   }
 
@@ -136,7 +136,7 @@ locals {
     namespace  = local.namespace
     tenant     = local.tenant
     stage      = local.stage
-    name       = local.component
+    component  = local.component
     attributes = join(local.delimiter, local.attributes)
   }
 
