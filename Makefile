@@ -1,4 +1,4 @@
-GITHUB_REPO := vigetlabs/terraform-module-context
+GITHUB_REPO := vigetlabs/terraform-context
 FILES_TO_COMPRESS := descriptors.tf main.tf outputs.tf variables.tf versions.tf LICENSE LICENSE-TF-CONTEXT
 GITHUB_CLI := gh
 
