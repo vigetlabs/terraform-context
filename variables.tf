@@ -7,6 +7,7 @@ variable "context" {
     enabled             = true
     namespace           = null
     tenant              = null
+    stage               = null
     component           = null
     delimiter           = null
     attributes          = []
